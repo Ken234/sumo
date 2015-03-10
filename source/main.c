@@ -13,7 +13,8 @@ int main(int argc, char *argv[])
 	// メインループ
 	while(g_status == END)
 	{
-		// メイン処理
+		// 入力センサ値をチェック
+		getInputSensorValue();
 	}
 	
     exit(0);

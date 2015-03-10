@@ -1,4 +1,4 @@
-SOURCES = main.c ev3module.c startsystem.c common.c
+SOURCES = main.c ev3module.c startsystem.c common.c getinputsensor.c
 TARGET = sumo
 CONF = Linux
 ARCH = AM1808

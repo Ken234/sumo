@@ -10,6 +10,7 @@
 #include "ev3module.h"
 
 #define GAMETIME 300
+#define HISTORY 100
 
 // マシンの状態のenum
 enum STATUS
@@ -27,5 +28,14 @@ int g_startTime;			// マシンが起動した時間
 
 void setStartTime();		// マシンが起動した時間を記録する
 int getReminedTimeToEnd();	// システム終了までの時間を取得する
+
+// センサ履歴関係
+typedef struct{
+	unsigned char color[HISTORY];		// カラーセンサ、インデックスが若いほど新しい履歴
+	unsigned char ultrawave[HISTORY];	// 超音波センサ
+	TOUCH_SENSOR_DATA touch[HISTORY];	// タッチセンサ
+}INPUT_SENSOR_VALUE;
+
+INPUT_SENSOR_VALUE historyInputSensor;	// 履歴
 
 #endif

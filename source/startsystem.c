@@ -64,7 +64,15 @@ int checkSystemIsBeforeStart()
  */
 void initializeSystem()
 {
-	// (TBD)グローバル変数を初期化
+	// 入力センサ値履歴を初期化
+	int i;
+	for(i=0;i<HISTORY;i++)
+	{
+		historyInputSensor.color[i] = 0;
+		historyInputSensor.ultrawave[i] = 0;
+		historyInputSensor.touch[i].left = TS_OFF;
+		historyInputSensor.touch[i].right = TS_OFF;
+	}
 	
 	// UARTセンサを初期化
 	initUARTSensor();
