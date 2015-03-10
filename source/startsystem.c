@@ -1,7 +1,6 @@
 #include"startsystem.h"
 
 #include"stdio.h"
-#include"unistd.h"
 
 /**
  * @brief システムを起動する
