@@ -12,5 +12,6 @@
 #include"common.h"
 #include"startsystem.h"
 #include"getinputsensor.h"
+#include"decideaction.h"
 
 #endif

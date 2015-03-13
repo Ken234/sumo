@@ -16,18 +16,19 @@
 // マシンの状態
 typedef enum
 {
-	BEFORESTART = 0,
-	STARTED,
-	END
+	BEFORESTART = 0,	// 起動前：スタートボタン押下前
+	STARTED,			// 起動中
+	END					// 終了
 }STATUS;
 
 // マシンの行動
 typedef enum
 {
-	ATTACK = 0,
-	CLOSEENEMY,
-	MOVECENTER,
-	STOPTOEND
+	NONE = 0,	// 起動時
+	ATTACK,		// 攻撃
+	CLOSEENEMY,	// 相手に近づく
+	MOVECENTER,	// 中心に移動する
+	STOPTOEND	// 停止する
 }ACTION;
 
 // ステータス関係
