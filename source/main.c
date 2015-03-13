@@ -3,16 +3,13 @@
 // メイン関数
 int main(int argc, char *argv[])
 {
-	ACTION action = MOVECENTER;
+	ACTION action = NONE;	// マシンの行動：設定なし
+	g_status = BEFORESTART;	// マシンのステータス：起動前
 
-	// システムのステータスを起動前に設定
-	g_status = BEFORESTART;
-
-	// システムを起動させる
-	// スタートボタンが押下されるまで、この関数内で無限ループ
+	// システムを起動
 	startSystem();
 
-	// メインループ
+	// メインループ：ステータスが終了なら抜ける
 	while(g_status == END)
 	{
 		// 入力センサ値をチェック
@@ -27,7 +24,7 @@ int main(int argc, char *argv[])
 		// 行動を実行する(未実装)
 		// exeAction(action);
 
-		// 取るべき行動が停止の場合、 メインループから抜けるステータスに変更
+		// 取るべき行動が停止の場合、 終了ステータスに変更
 		if(action == STOPTOEND)
 		{
 			g_status = END;
