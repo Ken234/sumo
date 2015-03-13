@@ -12,16 +12,27 @@
 #define GAMETIME 300
 #define HISTORY 100
 
-// マシンの状態のenum
-enum STATUS
+// enum関係
+// マシンの状態
+typedef enum
 {
 	BEFORESTART = 0,
 	STARTED,
 	END
-};
+}STATUS;
+
+// マシンの行動
+typedef enum
+{
+	ATTACK = 0,
+	CLOSEENEMY,
+	MOVECENTER,
+	STOPTOEND
+}ACTION;
 
 // ステータス関係
-int g_status;	// マシンの状態
+STATUS g_status;	// マシンの状態
+ACTION g_action;	// マシンの行動
 
 // タイマー関係
 int g_startTime;			// マシンが起動した時間
