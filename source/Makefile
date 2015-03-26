@@ -1,4 +1,4 @@
-SOURCES = main.c sakutama7_1_2.c ev3module.c startsystem.c common.c getinputsensor.c decideaction.c
+SOURCES = main.c armattack.c ev3module.c startsystem.c common.c getinputsensor.c decideaction.c getstopkey.c getTimeLeft.c
 TARGET = sumo
 CONF = Linux
 ARCH = AM1808
