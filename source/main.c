@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 		g_action = decideAction();
 
 		// 利用者に現在の行動を知らせる(未実装)
-		// announceCurrentAction(g_action);
+		announceCurrentAction(g_action);
 
 		// 行動を実行する(未実装)
 		// exeAction(g_action);

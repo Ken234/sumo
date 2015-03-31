@@ -13,5 +13,6 @@
 #include"startsystem.h"
 #include"getinputsensor.h"
 #include"decideaction.h"
+#include"announcecurrentaction.h"
 
 #endif
