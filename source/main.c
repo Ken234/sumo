@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 		announceCurrentAction(g_action);
 
 		// 行動を実行する(未実装)
-		// exeAction(g_action);
+		exeAction(g_action);
 
 		// 取るべき行動が停止の場合、 終了ステータスに変更
 		if(g_action == STOPTOEND)

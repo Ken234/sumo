@@ -5,6 +5,7 @@ SOURCES = \
 	common.c \
 	decideaction.c \
 	ev3module.c \
+	exeaction.c \
 	getinputsensor.c \
 	getstopkey.c \
 	getTimeLeft.c \
