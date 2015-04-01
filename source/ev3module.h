@@ -205,10 +205,12 @@ int closeUART();
 int setMotorPower(unsigned char ch, unsigned char power);
 int stopMotorFunc();
 
-
 int getKeySensor(int *key);
 int setLED(unsigned char color);
 int closeUI();
 
-
+int initializeUI();
+int ChgSensorMode(unsigned char ch, int mode);
+int initUARTSensor();
+int startMotorFunc();
 #endif
