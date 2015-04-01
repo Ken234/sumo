@@ -1,5 +1,6 @@
 #include"getTimeLeft.h"
 #include"stdio.h"
+#include <time.h>
 
 /**
  * @brief 競技残り時間を計算して返す
