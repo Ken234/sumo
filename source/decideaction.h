@@ -37,5 +37,6 @@ typedef enum
 ACTION decideAction();
 DEGREE_ACCESS getDegreeAccess();
 DEGREE_RISK getDegreeRisk();
+void updateHistoryAction(ACTION action);
 
 #endif

@@ -9,6 +9,8 @@
  */
 ACTION decideAction()
 {
+	ACTION ret = NONE;	// 返り値
+
 	DEGREE_ACCESS degreeAccess;
 	DEGREE_RISK degreeRisk;
 
@@ -19,32 +21,37 @@ ACTION decideAction()
 	{
 		// 土俵外の場合は停止させる
 		printf("INF: Action: Stop");
-		return STOPTOEND;
+		ret = STOPTOEND;
 	}
 	else if(degreeRisk == DR_RINGEDGE || degreeRisk == DR_NEARRING)
 	{
 		// 土俵際に近い場合は中心に移動させる
 		printf("INF: Action: Move to the center");
-		return MOVECENTER;
+		ret = MOVECENTER;
 	}
 	else if(degreeAccess == DA_NEAR || degreeAccess == DA_FAR)
 	{
 		// 安全かつ相手と接触していない場合は相手を探す
 		printf("INF: Action: Close enemy");
-		return CLOSEENEMY;
+		ret = CLOSEENEMY;
 	}
 	else if(degreeAccess == DA_CONTACT)
 	{
 		// 相手と接触している場合は相手を攻撃
 		printf("INF: Action: Attack");
-		return ATTACK;
+		ret = ATTACK;
 	}
 	else
 	{
 		// エラー：条件抜け
 		printf("ERR: Failed decide action");
-		return STOPTOEND;
+		ret = STOPTOEND;
 	}
+
+	// 行動の履歴を更新する
+	updateHistoryAction(ret);
+
+	return ret;
 }
 
 /**
@@ -129,3 +136,21 @@ DEGREE_RISK getDegreeRisk()
 		return DR_RINGEDGE;
 	}
 }
+
+/**
+ * @brief 行動履歴を更新する
+ */
+void updateHistoryAction(ACTION action)
+{
+	int i;
+
+	// 1つづつずらす
+	for(i=0; i<HISTORY-1; i++)
+	{
+		historyAction[HISTORY-i] = historyAction[HISTORY-i-1];
+	}
+
+	// 最新の値を代入
+	historyAction[0] = action;
+}
+
