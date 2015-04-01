@@ -11,8 +11,8 @@
 
 // 試合時間：300秒
 #define GAMETIME 300
-// 入力センサ履歴 とりあえず100回
-#define HISTORY 100
+// 入力センサ履歴 とりあえず30回
+#define HISTORY 30
 
 // enum関係
 // マシンの状態
@@ -51,5 +51,8 @@ typedef struct{
 }INPUT_SENSOR_VALUE;
 
 INPUT_SENSOR_VALUE historyInputSensor;	// 履歴
+
+// 行動履歴
+ACTION historyAction[HISTORY];
 
 #endif
