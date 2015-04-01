@@ -4,6 +4,6 @@
 #include"common.h"
 
 // 関数
-exeAction();
+void exeAction();
 
 #endif

@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 		// 利用者に現在の行動を知らせる
 		announceCurrentAction(g_action);
 
-		// 行動を実行する(未実装)
+		// 行動を実行する
 		exeAction(g_action);
 
 		// 取るべき行動が停止の場合、 終了ステータスに変更

@@ -9,10 +9,15 @@
 #ifndef SUMO
 #define SUMO
 
-#include"common.h"
-#include"startsystem.h"
-#include"getinputsensor.h"
-#include"decideaction.h"
 #include"announcecurrentaction.h"
+#include"common.h"
+#include"decideaction.h"
+#include"ev3module.h"
+#include"exeaction.h"
+#include"exeattack.h"
+#include"getinputsensor.h"
+#include"getTimeLeft.h"
+#include"sakuma.h"
+#include"startsystem.h"
 
 #endif

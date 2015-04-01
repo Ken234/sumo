@@ -6,6 +6,7 @@ SOURCES = \
 	decideaction.c \
 	ev3module.c \
 	exeaction.c \
+	exeattack.c \
 	getinputsensor.c \
 	getstopkey.c \
 	getTimeLeft.c \
