@@ -16,8 +16,8 @@ void getInputSensorValue()
 	int i;
 	
 	// センサー値取得
-	getColorSensor(csRes);
-	getUWSensor(uwRes);
+	getColorSensor(&csRes);
+	getUWSensor(&uwRes);
 	getTouchSensor(&touchSensorData);
 	
 	// センサ値更新
