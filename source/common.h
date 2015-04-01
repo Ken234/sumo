@@ -9,7 +9,9 @@
 
 #include "ev3module.h"
 
+// 試合時間：300秒
 #define GAMETIME 300
+// 入力センサ履歴 とりあえず100回
 #define HISTORY 100
 
 // enum関係
