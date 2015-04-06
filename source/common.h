@@ -37,6 +37,8 @@ typedef enum
 STATUS g_status;	// マシンの状態
 ACTION g_action;	// マシンの行動
 
+int g_isMoveCenter;	// 中心に移動中
+
 // タイマー関係
 int g_startTime;			// マシンが起動した時間
 

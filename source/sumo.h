@@ -17,6 +17,7 @@
 #include"exeattack.h"
 #include"getinputsensor.h"
 #include"getTimeLeft.h"
+#include"movecenterring.h"
 #include"sakuma.h"
 #include"startsystem.h"
 

@@ -1,5 +1,6 @@
 #include"exeaction.h"
 #include"exeattack.h"
+#include"movecenterring.h"
 #include"sakuma.h"
 
 #include<stdio.h>
@@ -25,24 +26,28 @@ void exeAction(ACTION action)
 		// 攻撃
 		case ATTACK:
 			exeAttack();
+			g_isMoveCenter = FALSE;
 			break;
 		// 敵に接近
 		case CLOSEENEMY:
 			// moveToEnemy() 未実装 - 佐久間
+			g_isMoveCenter = FALSE;
 			break;
 		// 中心に移動
 		case MOVECENTER:
-			// moveCenterRing() 未実装 - 作田
+			moveCenterRing();
 			break;
 		// 終了
 		case STOPTOEND:
 			stopSystem();
+			g_isMoveCenter = FALSE;
 			break;
 		// それ以外（起動前など）
 		default:
 			g_action = STOPTOEND;
 			printf("ERR: exeAction: the action is unexpected.");
 			stopSystem();
+			g_isMoveCenter = FALSE;
 	}
 }
 
