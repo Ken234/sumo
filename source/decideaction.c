@@ -105,26 +105,26 @@ DEGREE_RISK getDegreeRisk()
 	// １つまえのループでのセンサ値を取得
 	unsigned char colorBefore = historyInputSensor.color[1];
 
-	if(colorBefore >TH_RISK_NEARRING && colorNow < TH_RISK_CENTER)
+	if(colorBefore < TH_RISK_NEARRING && colorNow > TH_RISK_CENTER)
 	{
 		// 土俵の外にいる：負け
 		// 前のループの色が濃く、現在のループの色が薄い場合→土俵際を通過
 		printf("INF: Degree Risk: DA_RINGOUT");
 		return DR_RINGOUT;
 	}
-	else if(colorNow < TH_RISK_CENTER)
+	else if(colorNow > TH_RISK_CENTER)
 	{
 		// 土俵の中心にいる：非常に安全
 		printf("INF: Degree Risk: DA_CENTER");
 		return DR_CENTER;
 	}
-	else if(colorNow < TH_RISK_NEARCENTER)
+	else if(colorNow > TH_RISK_NEARCENTER)
 	{
 		// 土俵の中心寄りにいる：安全
 		printf("INF: Degree Risk: DA_NEARCENTER");
 		return DR_NEARCENTER;
 	}
-	else if(colorNow < TH_RISK_NEARRING)
+	else if(colorNow > TH_RISK_NEARRING)
 	{
 		// 土俵寄りにいる：危険
 		printf("INF: Degree Risk: DA_NEARRING");

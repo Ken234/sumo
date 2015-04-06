@@ -9,9 +9,9 @@
 #define TH_ACCESS_FAR 60
 
 // 危険度判定
-#define TH_RISK_CENTER 30
-#define TH_RISK_NEARCENTER 60
-#define TH_RISK_NEARRING 60
+#define TH_RISK_CENTER 200
+#define TH_RISK_NEARCENTER 100
+#define TH_RISK_NEARRING 100
 
 /// enum
 // 相手との接近度
