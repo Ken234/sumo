@@ -1,4 +1,5 @@
 #include"decideaction.h"
+#include"getstopkey.h"
 
 #include<stdio.h>
 
@@ -17,9 +18,9 @@ ACTION decideAction()
 	degreeAccess = getDegreeAccess();	// 接近度を取得
 	degreeRisk = getDegreeRisk();		// 危険度を取得
 
-	if(degreeRisk == DR_RINGOUT)
+	if((degreeRisk == DR_RINGOUT) || (getReminedTimeToEnd() == 0) || (getStopKey() == TRUE))
 	{
-		// 土俵外の場合は停止させる
+		// 土俵外の場合または試合時間のタイマーが0、停止ボタン押下の場合は停止させる
 		printf("INF: Action: Stop");
 		ret = STOPTOEND;
 	}

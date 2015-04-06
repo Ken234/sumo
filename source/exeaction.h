@@ -5,5 +5,6 @@
 
 // 関数
 void exeAction();
+void stopSystem();
 
 #endif

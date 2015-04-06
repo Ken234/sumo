@@ -36,11 +36,27 @@ void exeAction(ACTION action)
 			break;
 		// 終了
 		case STOPTOEND:
-			// stopSystem() 未実装 - 佐久間
+			stopSystem();
 			break;
 		// それ以外（起動前など）
 		default:
+			g_action = STOPTOEND;
 			printf("ERR: exeAction: the action is unexpected.");
-			// stopSystem() 未実装
+			stopSystem();
 	}
+}
+
+/**
+ * @brief 機体を停止させる
+ *
+ */
+void stopSystem()
+{
+	// 入出力型を閉じる
+	closeTouchSensor();
+	closeUART();
+	stopMotorFunc();	// モータ値が0になる
+	closeUI();
+
+	printf("SUMO System is finished.");
 }
