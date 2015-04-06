@@ -1,5 +1,5 @@
-#ifndef EXEACTION
-#define EXEACTION
+#ifndef EXEATTACK
+#define EXEATTACK
 
 #include"common.h"
 #include"sakuma.h"
@@ -8,7 +8,7 @@
 #define PUSH_STRAIGHT 30
 
 // 関数
-void exeAction();
+void exeAttack();
 void attackPush();
 
 #endif
