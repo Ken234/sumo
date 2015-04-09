@@ -12,6 +12,7 @@ SOURCES = \
 	getTimeLeft.c \
 	main.c \
 	movecenterring.c \
+	moveToEnemy.c \
 	startsystem.c
 
 # ビルド生成物（実行ファイル）の名前
