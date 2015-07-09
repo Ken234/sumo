@@ -20,6 +20,18 @@ void getInputSensorValue()
 	getUWSensor(&uwRes);
 	getTouchSensor(&touchSensorData);
 	
+	// ログ表示
+	printf("INF: getInputSensorValue: color: " + csRes);
+	printf("INF: getInputSensorValue: ultra: " + uwRes);
+	if(touchSensorData.left == TS_ON)
+		printf("INF: getInputSensorValue: left: ON\n");
+	else
+		printf("INF: getInputSensorValue: left: OFF\n");
+	if(touchSensorData.right == TS_ON)
+		printf("INF: getInputSensorValue: right: ON\n");
+	else
+		printf("INF: getInputSensorValue: right: OFF\n");
+		
 	// センサ値更新
 	// 重かったら履歴を残すセンサ値を減らす、履歴数を減らすなどを考える
 	
