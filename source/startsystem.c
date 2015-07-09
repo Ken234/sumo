@@ -87,6 +87,6 @@ void initializeSystem()
 	setStartTime();
 
 	printf("SUMO System is started.");
-
-	exit(0);
+	
+	return;
 }
